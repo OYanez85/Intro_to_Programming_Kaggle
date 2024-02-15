@@ -41,3 +41,92 @@ def cost_of_project(engraving, solid_gold):
 
 Question 3:
 
+def get_water_bill(num_gallons):
+    # Determine the price per 1000 gallons based on the tier
+    if num_gallons <= 8000:
+        price_per_thousand = 5
+    elif 8000 < num_gallons <= 22000:
+        price_per_thousand = 6
+    elif 22000 < num_gallons <= 30000:
+        price_per_thousand = 7
+    elif num_gallons > 30000:
+        price_per_thousand = 10
+
+    # Calculate the bill
+    bill = (num_gallons / 1000) * price_per_thousand
+    return bill
+
+# Example usage
+print(get_water_bill(10000))  # Should return 60.0
+print(get_water_bill(25000))  # Should return 175.0
+
+Question 4:
+
+def get_phone_bill(gb):
+    base_plan_cost = 100  # Cost for up to 15 GB
+    additional_data_rate_per_gb = 100  # Cost per additional GB after 15 GB
+    
+    if gb <= 15:
+        bill = base_plan_cost
+    else:
+        # Calculate the additional data used beyond the included 15 GB
+        additional_gb = gb - 15
+        # Calculate the cost for the additional data
+        additional_cost = additional_gb * additional_data_rate_per_gb
+        # Total bill is the sum of the base plan cost and the additional cost
+        bill = base_plan_cost + additional_cost
+        
+    return bill
+
+# Example usage
+print(get_phone_bill(10))  # Expected output: 100
+print(get_phone_bill(15.1))  # Expected output: 110
+
+Question 5:
+# zucaritas cereal https://world.openfoodfacts.org/product/7501008023624/zucaritas-kellogg-s
+# TODO: Uncomment the line below, fill in the values, and run the function
+food_type = "solid" #(because bologna is a solid and not a liquid)
+serving_size = 40 #(the serving size is 40 grams)
+calories_per_serving = 150 #(there are 150 calories per serving)
+saturated_fat_g = 0 #(there are 0 grams of saturated fat per serving)
+trans_fat_g = 0 #(there are 0 grams of trans fat per serving)
+sodium_mg = 150 #(there are 150 mg of sodium per serving)
+sugars_g = 16 #(the nutrition facts say 16g)
+
+get_labels("solid",40, 150, 0, 0, 150, 16)
+------------------
+# mozzarella sticks https://world-es.openfoodfacts.org/producto/0062325540104/mozzarella-cheese-sticks
+# TODO: Uncomment the line below, fill in the values, and run the function
+food_type = "solid" #(because bologna is a solid and not a liquid)
+serving_size = 21 #(the serving size is 21 grams)
+calories_per_serving = 68 #(there are 68 calories per serving)
+saturated_fat_g = 3 #(there are 3 grams of saturated fat per serving)
+trans_fat_g = 0.2 #(there are 0.2 grams of trans fat per serving)
+sodium_mg = 208 #(there are 208 mg of sodium per serving)
+sugars_g = 0 #(the nutrition facts say 0g)
+
+get_labels("solid", 21, 68, 3, 0.2, 208, 0)
+----------------
+# pillsbury cookies https://world.openfoodfacts.org/product/0069700118545/biscuits-au-sucre-pretraches
+# TODO: Uncomment the line below, fill in the values, and run the function
+food_type = "solid" #(because bologna is a solid and not a liquid)
+serving_size = 30 #(the serving size is 30 grams)
+calories_per_serving = 120 #(there are 120 calories per serving)
+saturated_fat_g = 1.5 #(there are 1.5 grams of saturated fat per serving)
+trans_fat_g = 0.1 #(there are 0.1 grams of trans fat per serving)
+sodium_mg = 110 #(there are 110 mg of sodium per serving)
+sugars_g = 9 #(the nutrition facts say 9g)
+
+get_labels("solid", 30, 120, 1.5, 0.1, 110, 9)
+---------------------
+# sunkist orange soda https://world-es.openfoodfacts.org/producto/0078000113464/orange-soda-sunkist
+# TODO: Uncomment the line below, fill in the values, and run the function
+food_type = "liquid" #(because bologna is a solid and not a liquid)
+serving_size = 2000 #(the serving size is 2 liters)
+calories_per_serving = 160 #(there are 160 calories per serving)
+saturated_fat_g = 0 #(there are 0 grams of saturated fat per serving)
+trans_fat_g = 0 #(there are 0 grams of trans fat per serving)
+sodium_mg = 65 #(there are 65 mg of sodium per serving)
+sugars_g = 44 #(the nutrition facts say 44g)
+
+get_labels("liquid", 2000, 160, 0, 0, 65, 44)
