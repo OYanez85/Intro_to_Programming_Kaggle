@@ -1,2 +1,34 @@
 Question 1
 
+# TODO: Complete the function
+def get_expected_cost(beds, baths):
+    value = 80000 + (beds * 30000) + (baths * 10000)
+    return value
+
+Question 2:
+
+# TODO: Use the get_expected_cost function to fill in each value
+option_one = 80000 + (2 * 30000) + (3 * 10000)
+option_two = 80000 + (3 * 30000) + (2 * 10000)
+option_three = 80000 + (3 * 30000) + (3 * 10000)
+option_four = 80000 + (3 * 30000) + (4 * 10000)
+
+print(option_one)
+print(option_two)
+print(option_three)
+print(option_four)
+
+Querstion 3:
+
+# TODO: Finish defining the function
+def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
+    # Calculate the total square footage to paint
+    total_sqft = sqft_walls + sqft_ceiling
+    # Calculate the number of gallons needed based on the coverage rate of the paint
+    gallons_needed = total_sqft / sqft_per_gallon
+    # Calculate the total cost based on the number of gallons needed and the cost per gallon
+    cost = gallons_needed * cost_per_gallon
+    return cost
+
+Querstion 4: 
+
