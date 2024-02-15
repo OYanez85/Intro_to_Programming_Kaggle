@@ -16,3 +16,28 @@ def get_grade(score):
     return grade
 
 Question 2:
+
+def cost_of_project(engraving, solid_gold):
+    # Constants for the cost structure
+    gold_plated_base_cost = 50
+    solid_gold_base_cost = 100
+    gold_plated_engraving_cost_per_unit = 7
+    solid_gold_engraving_cost_per_unit = 10
+    
+    # Determine the base cost and cost per unit based on the ring type
+    if solid_gold:
+        base_cost = solid_gold_base_cost
+        cost_per_unit = solid_gold_engraving_cost_per_unit
+    else:
+        base_cost = gold_plated_base_cost
+        cost_per_unit = gold_plated_engraving_cost_per_unit
+    
+    # Calculate the total cost of the engraving
+    total_engraving_cost = cost_per_unit * len(engraving)
+    
+    # Calculate the final cost of the project
+    cost = base_cost + total_engraving_cost
+    return cost
+
+Question 3:
+
