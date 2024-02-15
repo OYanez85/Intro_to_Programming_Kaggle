@@ -1,1 +1,81 @@
+Question 1:
+# Define a float
+y = 1.
+print(y)
+print(type(y))
 
+# Convert float to integer with the int function
+z = int(y)
+print(z)
+print(type(z))
+
+# Uncomment and run this code to get started!
+print(int(1.2321))
+print(int(1.747))
+print(int(-3.94535))
+print(int(-2.19774))
+
+Question 2:
+
+# Uncomment and run this code to get started!
+print(3 * True)
+print(-3.1 * True)
+print(type("abc" * False))
+print(len("abc" * False))
+
+Question 3:
+
+# TODO: Complete the function
+def get_expected_cost(beds, baths, has_basement):
+    # Example calculation (adjust according to the actual logic you want to apply)
+    base_cost = 80000  # Base cost of a house
+    bed_cost = 30000  # Additional cost per bedroom
+    bath_cost = 10000  # Additional cost per bathroom
+    basement_cost = 40000 if has_basement else 0  # Additional cost if there's a basement
+
+    total_cost = base_cost + (beds * bed_cost) + (baths * bath_cost) + basement_cost
+    return total_cost
+
+# Example usage of the function
+value = get_expected_cost(1, 1, False)
+print(value)
+
+Question 4:
+
+print(False + False)
+print(True + False)
+print(False + True)
+print(True + True)
+print(False + True + True + True)
+
+Question 5:
+
+def cost_of_project(engraving, solid_gold):
+    # Constants for the cost structure
+    gold_plated_base_cost = 50
+    solid_gold_base_cost = 100
+    gold_plated_engraving_cost_per_unit = 7
+    solid_gold_engraving_cost_per_unit = 10
+    
+    # Determine the base cost and cost per unit based on the ring type
+    if solid_gold:
+        base_cost = solid_gold_base_cost
+        cost_per_unit = solid_gold_engraving_cost_per_unit
+    else:
+        base_cost = gold_plated_base_cost
+        cost_per_unit = gold_plated_engraving_cost_per_unit
+    
+    # Calculate the total cost of the engraving
+    total_engraving_cost = cost_per_unit * len(engraving)
+    
+    # Calculate the final cost of the project
+    cost = base_cost + total_engraving_cost
+    return cost
+
+# Example usage
+engraving_text = "Love, forever and always."
+solid_gold = True
+print(cost_of_project(engraving_text, solid_gold))  # Solid gold ring with the example engraving
+
+solid_gold = False
+print(cost_of_project(engraving_text, solid_gold))  # Gold plated ring with the example engraving
