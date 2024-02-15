@@ -32,3 +32,52 @@ def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
 
 Querstion 4: 
 
+# TODO: Set the project_cost variable to the cost of the project
+# TODO: Finish defining the function
+def project_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
+    # Calculate the total square footage to paint
+    total_sqft = sqft_walls + sqft_ceiling
+    # Calculate the number of gallons needed based on the coverage rate of the paint
+    gallons_needed = total_sqft / sqft_per_gallon
+    # Calculate the total cost based on the number of gallons needed and the cost per gallon
+    project_cost = gallons_needed * cost_per_gallon
+    return project_cost
+
+# Example usage
+sqft_walls = 432
+sqft_ceiling = 144
+sqft_per_gallon = 400
+cost_per_gallon = 15
+
+# Now, we'll use the example values to call the function
+project_cost = project_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon)
+print(project_cost)
+
+Question 5:
+import math  # Import math module to use math.ceil()
+
+def get_actual_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
+    # Calculate the total square footage to paint
+    total_sqft = sqft_walls + sqft_ceiling
+    # Calculate the number of gallons needed based on the coverage rate of the paint
+    # Use math.ceil() to round up to the nearest whole gallon
+    gallons_needed = math.ceil(total_sqft / sqft_per_gallon)
+    # Calculate the total cost based on the number of whole gallons needed and the cost per gallon
+    cost = gallons_needed * cost_per_gallon
+    return cost
+
+# Example usage with correct variable and function names
+sqft_walls = 432
+sqft_ceiling = 144
+sqft_per_gallon = 400
+cost_per_gallon = 15
+
+# Use the correct function to calculate project cost
+project_cost = get_actual_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon)
+# Since we're already rounding up the gallons needed inside the function,
+# we don't need to round the total cost again
+print("Project cost:", project_cost)
+
+get_actual_cost(432, 144, 400, 15) 
+
+get_actual_cost(594, 288, 400, 15) 
