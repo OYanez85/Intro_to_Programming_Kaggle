@@ -1,2 +1,19 @@
 Question 1:
 
+# Do not change: Initial menu for your restaurant
+menu = ['stewed meat with onions', 'bean soup', 'risotto with trout and shrimp',
+       'fish soup with cream and onion', 'gyro']
+
+# TODO: remove 'bean soup', and add 'roasted beet salad' to the end of the menu
+menu.remove("bean soup")
+#print(menu)
+
+menu.append("roasted beet salad")
+print(menu)
+
+# Do not change: Check your answer
+q1.check()
+
+Question 2:
+
+
