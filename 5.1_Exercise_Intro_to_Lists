@@ -1,4 +1,4 @@
-Question 1:
+### Question 1:
 
 # Do not change: Initial menu for your restaurant
 menu = ['stewed meat with onions', 'bean soup', 'risotto with trout and shrimp',
@@ -14,7 +14,7 @@ print(menu)
 # Do not change: Check your answer
 q1.check()
 
-Question 2:
+### Question 2:
 
 import math
 
@@ -39,7 +39,7 @@ print("Average customers in last seven days:", avg_last_seven)
 print("Maximum:", max_month)
 print("Minimum:", min_month)
 
-Question 3:
+### Question 3:
 
 flowers = "pink primrose,hard-leaved pocket orchid,canterbury bells,sweet pea,english marigold,tiger lily,moon orchid,bird of paradise,monkshood,globe thistle"
 
@@ -59,7 +59,7 @@ print("Address:", formatted_address)
 # Do not change: Check your answer
 q3.check()
 
-Question 4:
+### Question 4:
 
 test_ratings = [1, 2, 3, 4, 5]
 
@@ -75,7 +75,7 @@ def percentage_liked(ratings):
 # Do not change: should return 0.5
 percentage_liked([1, 2, 3, 4, 5, 4, 5, 1])
 
-Question 5: 
+### Question 5: 
 
 # TODO: Edit the function
 def percentage_growth(num_users, yrs_ago):
